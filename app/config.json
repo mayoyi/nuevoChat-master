@@ -1,0 +1,21 @@
+{
+  "name": "NuevoChat",
+  "supportEmail": "mayra.delgado@metricamovil.com",
+  "version": "0.0.1",
+  "items": [{
+    
+    "url": "nuevoChat.html",
+    "path": "",
+    "menuName": {
+      "en": "NuevoChat"
+    },
+    
+    "icon": "images/icon.svg"
+  }],
+  "dev": {
+    "root": "nuevoChat",
+    "dist": {
+      "host": "https://www.example.com/myaddin/"
+    }
+  }
+}

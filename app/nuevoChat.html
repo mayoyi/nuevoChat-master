@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NuevoChat</title>
+
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+</head>
+
+<body>
+
+  <div id="nuevoChat" class="hidden">
+
+    <header class="geotabPageHeader">
+      <h1 class="geotabPageName">NuevoChat
+        <span class="subdued">(Beta)</span>
+      </h1>
+      <div class="pageNameSecondary">
+        <h3 class="geotabSecondaryTitle">by:
+          <span id="nuevoChat-user"></span>
+        </h3>
+      </div>
+    </header>
+    <script src="https://s3.amazonaws.com/snippets.freshchat.com/js/fc-pre-chat-form.js"></script>
+<script>
+  fcPreChatFormData = {
+    //Form header color and Submit button color.
+    mainbgColor: '#0aa4db',
+    //Form Header Text and Submit button text color.
+    maintxColor: '#fff',
+    //Chat Form Title
+    title: 'Gadget God',
+    //Chat form Welcome Message
+    textBanner: 'We can\'t wait to talk to you. But first, please take a couple of moments to tell us a bit about yourself.',
+    //Name field Label
+    nameLabel: 'Name',
+    //Set reqName as 'required' if you want the name field to be mandatory.
+    reqName: 'notrequired',
+    //If name field is set as mandatory, then the below message will be displayed if the field value is not valid or empty.
+    nameError: 'Please enter a valid name :)',
+    //To not display the Email, set the value to 'no'
+    showEmail: 'yes',
+    //Email field label
+    emailLabel: 'E-mail',
+    //Set reqEmail as 'required' if you want the field to be mandatory.
+    reqEmail: 'notrequired',
+    //If email field is set as mandatory, then the below message will be displayed if the field value is not valid or empty.
+    emailError: 'Please enter a valid email.',
+    //To not display the Phone, set the value to 'no'
+    showPhone: 'yes',
+    //Phone Field Label
+    phoneLabel: 'Mobile',
+    //Set reqPhone as 'required' if you want the field to be mandatory.
+    reqPhone: 'required',
+    //If phone field is set as mandatory, then the below message will be displayed if the field value is not valid or empty.
+    phoneError: 'Please enter a valid contact number',
+    //Submit Button Label.
+    SubmitLabel: 'Start Chat',
+  };
+  window.fcSettings = {
+    token: 'WEB_CHAT_TOKEN',
+    host: "https://wchat.freshchat.com",
+    config: {
+      cssNames: {
+        //The below element is mandatory. Please add any custom class or leave the default.
+        widget: 'custom_fc_frame',
+      }
+    },
+    onInit: function() {
+      console.log('widget init');
+      fcPreChatform.fcWidgetInit(fcPreChatFormData);
+    }
+  };
+</script>
+<script src="https://wchat.freshchat.com/js/widget.js" async></script>
+
+  </div>
+ 
+</body>
+
+</html>
